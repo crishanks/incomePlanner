@@ -26,4 +26,42 @@
         android:layout_marginLeft="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/workHoursEditText"
+        android:hint="Work Hours Per Day"
+        android:inputType="number"
+        android:imeOptions="actionNext"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/taxRateEditText"
+        android:hint="Tax Rate (%)"
+        android:inputType="number"
+        android:imeOptions="actionNext"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/savingsRateEditText"
+        android:hint="Savings Rate (%)"
+        android:inputType="number"
+        android:imeOptions="actionNext"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:text="Calculate"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="300dp"
+        android:layout_height="50dp"/>
 </LinearLayout>

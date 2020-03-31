@@ -11,9 +11,19 @@
         android:text="Input Values Accordingly"
         android:textSize="22sp"
         android:textStyle="bold"
-        androud:gravity="center"
+        android:gravity="center"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/incomePerHourEditText"
+        android:hint="$ Per Hour"
+        android:inputType="number"
+        android:imeOptions="actionNext"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </LinearLayout>

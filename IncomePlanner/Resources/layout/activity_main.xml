@@ -17,12 +17,12 @@
             android:layout_height="match_parent"
         >
             <TextView
-                android:text="Input Values Accordingly"
+                android:text="Input Values"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="60dp"
+                android:layout_marginBottom="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
             />
@@ -91,6 +91,101 @@
                 android:layout_width="300dp"
                 android:layout_height="50dp"
             />
+
+            <RelativeLayout
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/wordSummaryTitle"
+                    android:text="Annual Work Summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                />
+                <TextView
+                    android:id="@+id/wordSummaryTextView"
+                    android:layout_alignParentRight="true"
+                    android:text="0 HRS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    
+                </TextView>
+                <TextView
+                    android:id="@+id/grossIncomeTitle"
+                    android:layout_below="@+id/wordSummaryTitle"
+                    android:paddingTop="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:text="Annual Gross Income"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:id="@+id/grossIncomeTextView"
+                    android:layout_below="@+id/wordSummaryTextView"
+                    android:paddingTop="10dp"
+                    android:layout_alignParentRight="true"
+                    android:text="54000 USD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:id="@+id/taxPayableTitle"
+                    android:layout_below="@+id/grossIncomeTitle"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="10dp"
+                    android:text="Annual Tax Payable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:id="@+id/taxPayableTextView"
+                    android:layout_below="@+id/grossIncomeTextView"
+                    android:paddingTop="10dp"
+                    android:layout_alignParentRight="true"
+                    android:text="0 USD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:id="@+id/annualSavingsTitle"
+                    android:layout_below="@+id/taxPayableTitle"
+                    android:layout_alignParentLeft="true"
+                    android:paddingTop="10dp"
+                    android:text="Annual Savings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:id="@+id/annualSavingsTextView"
+                    android:layout_below="@+id/taxPayableTextView"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:text="0 USD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:id="@+id/spendableIncomeTitle"
+                    android:layout_below="@+id/annualSavingsTitle"
+                    android:text="Spendable Income"
+                    android:paddingTop="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:id="@+id/spendableIncomeTextView"
+                    android:layout_below="@+id/annualSavingsTextView"
+                    android:text="0 USD"
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

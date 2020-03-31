@@ -93,6 +93,8 @@
             />
 
             <RelativeLayout
+                android:id="@+id/resultLayout"
+                android:layout_marginBottom="30dp"
                 android:paddingRight="20dp"
                 android:paddingLeft="20dp"
                 android:layout_alignParentLeft="true"
@@ -127,7 +129,7 @@
                     android:layout_below="@+id/wordSummaryTextView"
                     android:paddingTop="10dp"
                     android:layout_alignParentRight="true"
-                    android:text="54000 USD"
+                    android:text="0 USD"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 </TextView>
@@ -174,7 +176,8 @@
                     android:paddingTop="10dp"
                     android:layout_alignParentLeft="true"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold">
                 </TextView>
                 <TextView
                     android:id="@+id/spendableIncomeTextView"
@@ -183,7 +186,8 @@
                     android:layout_alignParentRight="true"
                     android:paddingTop="10dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold">
                 </TextView>
             </RelativeLayout>
         </LinearLayout>

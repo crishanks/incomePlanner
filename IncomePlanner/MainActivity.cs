@@ -58,6 +58,7 @@ namespace IncomePlanner
             double taxRate = double.Parse(taxRateEditText.Text);
             double savingsRate = double.Parse(savingsRateEditText.Text);
 
+            //Calculations
             double annualWorkHourSummary = workHourPerDay * 5 * 50; // 52 weeks/year minus 2 vacation weeks
             double annualIncome = incomePerHour * workHourPerDay * 5 * 50;
             double taxPayable = (taxRate / 100) * annualIncome;
@@ -65,11 +66,11 @@ namespace IncomePlanner
             double spendableIncome = annualIncome - annualSavings - taxPayable;
 
             //Display results
-            grossIncomeTextView.Text = annualIncome.ToString();
-            workSummaryTextView.Text = annualWorkHourSummary.ToString() + " HRS";
-            taxPayableTextView.Text = taxPayable.ToString() + " USD";
-            annualSavingsTextView.Text = annualSavings.ToString() + " USD";
-            spendableIncomeTextView.Text = spendableIncome.ToString() + "  USD";
+            grossIncomeTextView.Text = annualIncome.ToString("#,##") + " USD";
+            workSummaryTextView.Text = annualWorkHourSummary.ToString("#,##") + " HRS";
+            taxPayableTextView.Text = taxPayable.ToString("#,##") + " USD";
+            annualSavingsTextView.Text = annualSavings.ToString("#,##") + " USD";
+            spendableIncomeTextView.Text = spendableIncome.ToString("##,#") + "  USD";
 
             resultLayout.Visibility = Android.Views.ViewStates.Visible;
         }

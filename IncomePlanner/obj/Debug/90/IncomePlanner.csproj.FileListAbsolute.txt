@@ -257,3 +257,4 @@ C:\Users\i27761\Documents\study\IncomePlanner\IncomePlanner\obj\Debug\90\stamp\_
 C:\Users\i27761\Documents\study\IncomePlanner\IncomePlanner\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\i27761\Documents\study\IncomePlanner\IncomePlanner\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\i27761\Documents\study\IncomePlanner\IncomePlanner\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\i27761\Documents\study\IncomePlanner\IncomePlanner\obj\Debug\90\IncomePlanner.csprojAssemblyReference.cache

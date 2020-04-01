@@ -1171,9 +1171,9 @@ int id useLogo 0x7f0800c6
 int id view_offset_helper 0x7f0800c7
 int id visible 0x7f0800c8
 int id withText 0x7f0800c9
-int id wordSummaryTextView 0x7f0800ca
-int id wordSummaryTitle 0x7f0800cb
-int id workHoursEditText 0x7f0800cc
+int id workHoursEditText 0x7f0800ca
+int id workSummaryTextView 0x7f0800cb
+int id workSummaryTitle 0x7f0800cc
 int id wrap_content 0x7f0800cd
 int integer abc_config_activityDefaultDur 0x7f090000
 int integer abc_config_activityShortDur 0x7f090001

@@ -3857,13 +3857,13 @@ namespace IncomePlanner
 			public const int withText = 2131230932;
 			
 			// aapt resource value: 0x7F0800D5
-			public const int wordSummaryTextView = 2131230933;
+			public const int workHoursEditText = 2131230933;
 			
 			// aapt resource value: 0x7F0800D6
-			public const int wordSummaryTitle = 2131230934;
+			public const int workSummaryTextView = 2131230934;
 			
 			// aapt resource value: 0x7F0800D7
-			public const int workHoursEditText = 2131230935;
+			public const int workSummaryTitle = 2131230935;
 			
 			// aapt resource value: 0x7F0800D8
 			public const int wrap_content = 2131230936;

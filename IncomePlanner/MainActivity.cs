@@ -23,6 +23,8 @@ namespace IncomePlanner
         Button calculateButton;
         RelativeLayout resultLayout;
 
+        bool inputCalculated = false;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -52,6 +54,14 @@ namespace IncomePlanner
 
         private void CalculateButton_Click(object sender, System.EventArgs e)
         {
+            if (inputCalculated)
+            {
+                inputCalculated = false;
+                calculateButton.Text = "Calculate";
+                ClearInput();
+                return;
+            }
+
             //Take user inputs
             double incomePerHour = double.Parse(incomePerHourEditText.Text);
             double workHourPerDay = double.Parse(workHourPerDayEditText.Text);
@@ -73,6 +83,18 @@ namespace IncomePlanner
             spendableIncomeTextView.Text = spendableIncome.ToString("##,#") + "  USD";
 
             resultLayout.Visibility = Android.Views.ViewStates.Visible;
+            inputCalculated = true;
+            calculateButton.Text = "Clear";
+        }
+
+        void ClearInput()
+        {
+            incomePerHourEditText.Text = "";
+            workHourPerDayEditText.Text = "";
+            taxRateEditText.Text = "";
+            savingsRateEditText.Text = "";
+
+            resultLayout.Visibility = Android.Views.ViewStates.Invisible;
         }
     }
 }

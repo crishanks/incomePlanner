@@ -10,7 +10,7 @@ namespace IncomePlanner
     public class MainActivity : AppCompatActivity
     {
         EditText incomePerHourEditText;
-        EditText workHourPerDayEditTxt;
+        EditText workHourPerDayEditText;
         EditText taxRateEditText;
         EditText savingsRateEditText;
 
@@ -34,7 +34,7 @@ namespace IncomePlanner
         void ConnectViews()
         {
             incomePerHourEditText = FindViewById<EditText>(Resource.Id.incomePerHourEditText);
-            workHourPerDayEditTxt = FindViewById<EditText>(Resource.Id.workHoursEditText);
+            workHourPerDayEditText = FindViewById<EditText>(Resource.Id.workHoursEditText);
             taxRateEditText = FindViewById<EditText>(Resource.Id.taxRateEditText);
             savingsRateEditText = FindViewById<EditText>(Resource.Id.savingsRateEditText);
 
@@ -46,6 +46,32 @@ namespace IncomePlanner
 
             calculateButton = FindViewById<Button>(Resource.Id.calculateButton);
             resultLayout = FindViewById<RelativeLayout>(Resource.Id.resultLayout);
+
+            calculateButton.Click += CalculateButton_Click;
+        }
+
+        private void CalculateButton_Click(object sender, System.EventArgs e)
+        {
+            //Take user inputs
+            double incomePerHour = double.Parse(incomePerHourEditText.Text);
+            double workHourPerDay = double.Parse(workHourPerDayEditText.Text);
+            double taxRate = double.Parse(taxRateEditText.Text);
+            double savingsRate = double.Parse(savingsRateEditText.Text);
+
+            double annualWorkHourSummary = workHourPerDay * 5 * 50; // 52 weeks/year minus 2 vacation weeks
+            double annualIncome = incomePerHour * workHourPerDay * 5 * 50;
+            double taxPayable = (taxRate / 100) * annualIncome;
+            double annualSavings = (savingsRate / 100) * annualIncome;
+            double spendableIncome = annualIncome - annualSavings - taxPayable;
+
+            //Display results
+            grossIncomeTextView.Text = annualIncome.ToString();
+            workSummaryTextView.Text = annualWorkHourSummary.ToString() + " HRS";
+            taxPayableTextView.Text = taxPayable.ToString() + " USD";
+            annualSavingsTextView.Text = annualSavings.ToString() + " USD";
+            spendableIncomeTextView.Text = spendableIncome.ToString() + "  USD";
+
+            resultLayout.Visibility = Android.Views.ViewStates.Visible;
         }
     }
 }
